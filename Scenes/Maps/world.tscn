@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://so5m48j13sj8"]
+
+[ext_resource type="Texture2D" uid="uid://y483d4txktjq" path="res://Assets/autumn_field_puresky_2k.exr" id="1_y60k7"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_okudv"]
+panorama = ExtResource("1_y60k7")
+
+[sub_resource type="Sky" id="Sky_ccg00"]
+sky_material = SubResource("PanoramaSkyMaterial_okudv")
+
+[sub_resource type="Environment" id="Environment_o77yt"]
+background_mode = 3
+sky = SubResource("Sky_ccg00")
+
+[node name="World" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_o77yt")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+size = Vector3(57, 1, 57)

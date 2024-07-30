@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs6th5keib0e2"
-path.s3tc="res://.godot/imported/texture_08.png-c080832cfa7d2c52fab4bda991631772.s3tc.ctex"
+uid="uid://dy04tpfeqp7mn"
+path.s3tc="res://.godot/imported/texture_01.png-7d604a34a73c90a20b3e28f8bcfe141c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/prototypeTexture/PrototypePNG/Orange/texture_08.png"
-dest_files=["res://.godot/imported/texture_08.png-c080832cfa7d2c52fab4bda991631772.s3tc.ctex"]
+source_file="res://Assets/MapModels/textures/texture_01.png"
+dest_files=["res://.godot/imported/texture_01.png-7d604a34a73c90a20b3e28f8bcfe141c.s3tc.ctex"]
 
 [params]
 

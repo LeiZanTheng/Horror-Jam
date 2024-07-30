@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://so5m48j13sj8"]
+[gd_scene load_steps=7 format=3 uid="uid://so5m48j13sj8"]
 
 [ext_resource type="Texture2D" uid="uid://y483d4txktjq" path="res://Assets/autumn_field_puresky_2k.exr" id="1_y60k7"]
+[ext_resource type="PackedScene" uid="uid://dx5ch1qg61bgb" path="res://Scenes/Entities/Player.tscn" id="3_i0vky"]
+[ext_resource type="PackedScene" uid="uid://l04h6f8ix4mr" path="res://Assets/MapModels/map.blend" id="3_lhld2"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_okudv"]
 panorama = ExtResource("1_y60k7")
@@ -9,13 +11,23 @@ panorama = ExtResource("1_y60k7")
 sky_material = SubResource("PanoramaSkyMaterial_okudv")
 
 [sub_resource type="Environment" id="Environment_o77yt"]
-background_mode = 3
+background_mode = 2
 sky = SubResource("Sky_ccg00")
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+glow_enabled = true
 
 [node name="World" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_o77yt")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="."]
-size = Vector3(57, 1, 57)
+[node name="CharacterBody3D" parent="." instance=ExtResource("3_i0vky")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1, -1)
+
+[node name="map" parent="." instance=ExtResource("3_lhld2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[editable path="map"]

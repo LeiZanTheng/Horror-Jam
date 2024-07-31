@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp8odubilfn5j"]
+
+[ext_resource type="PackedScene" uid="uid://c557oh6j0ndi8" path="res://Assets/Models/target.blend" id="1_a6egg"]
+[ext_resource type="Script" path="res://Scripts/target.gd" id="2_d4tp0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_525n4"]
+size = Vector3(0.48645, 1.33447, 1.31787)
+
+[node name="target" instance=ExtResource("1_a6egg")]
+
+[node name="hit_box" type="Area3D" parent="Cube" index="0"]
+script = ExtResource("2_d4tp0")
+
+[node name="hitbox_shape" type="CollisionShape3D" parent="Cube/hit_box" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00335693, -0.0272877, -0.00317383)
+shape = SubResource("BoxShape3D_525n4")

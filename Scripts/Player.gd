@@ -1,3 +1,4 @@
+class_name PLAYER
 extends CharacterBody3D
 
 @onready var player_cam : Camera3D = $Camera3D
@@ -14,10 +15,12 @@ var gravity : float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var is_shooting : bool = false
 
 func _ready() -> void:
+	Global.player = self
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	original_speed = speed
 
 func _process(_delta: float) -> void:
+	Global.player_pos = global_position
 	_cursor_handle()
 	
 	# Gun logic
@@ -31,10 +34,11 @@ func _physics_process(delta: float) -> void:
 		velocity.y -= gravity * delta
 	
 	# Handle move
-	_move()
+	if not Global.is_in_event:
+		_move()
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and not Global.is_in_event:
 		rotate_y(-deg_to_rad(event.relative.x * mouse_sensitive))
 		player_cam.rotate_x(-deg_to_rad(event.relative.y * mouse_sensitive))
 		player_cam.rotation.x = clamp(player_cam.rotation.x, deg_to_rad(-89), deg_to_rad(89))
@@ -72,6 +76,8 @@ func _shoot() -> void:
 	if shooting_ray.is_colliding():
 		const MUZZLE = preload("res://Scenes/muzzle_flash.tscn")
 		var cur_muzzle := MUZZLE.instantiate()
+		if shooting_ray.get_collider().has_method("_head_shot_handle"):
+			shooting_ray.get_collider()._head_shot_handle()
 		shooting_ray.get_collider().add_child(cur_muzzle)
 		cur_muzzle.global_transform.origin = shooting_ray.get_collision_point()
 		cur_muzzle.look_at(global_position)

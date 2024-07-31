@@ -15,3 +15,8 @@ Thực hiện:
 + Chết
 
 *Còn thời gian thì sửa no-clip cho súng
+
+
+---------------------Chú ý:
+-Raycast nhận bitmask 1 ----> omg bitmask kìa ae :skull:
+-Các area (trừ head_shot_hitbox) ở layer 2

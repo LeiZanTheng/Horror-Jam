@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://so5m48j13sj8"]
+
+[ext_resource type="Texture2D" uid="uid://y483d4txktjq" path="res://Assets/Misc/autumn_field_puresky_2k.exr" id="1_y60k7"]
+[ext_resource type="PackedScene" uid="uid://dx5ch1qg61bgb" path="res://Scenes/Entities/Player.tscn" id="3_i0vky"]
+[ext_resource type="PackedScene" uid="uid://l04h6f8ix4mr" path="res://Assets/MapModels/map.blend" id="3_lhld2"]
+[ext_resource type="PackedScene" uid="uid://g3s84mllab2v" path="res://Scenes/Entities/ghost.tscn" id="4_hy80p"]
+[ext_resource type="PackedScene" uid="uid://cp8odubilfn5j" path="res://Scenes/Entities/target.tscn" id="5_vgcsq"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_okudv"]
+panorama = ExtResource("1_y60k7")
+
+[sub_resource type="Sky" id="Sky_ccg00"]
+sky_material = SubResource("PanoramaSkyMaterial_okudv")
+
+[sub_resource type="Environment" id="Environment_o77yt"]
+sky = SubResource("Sky_ccg00")
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+fog_enabled = true
+volumetric_fog_sky_affect = 0.0
+
+[node name="World" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.829038, 0.484275, -0.279596, 0, 0.5, 0.866025, 0.559193, -0.717968, 0.414519, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_o77yt")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("3_i0vky")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 2, -1)
+
+[node name="map" parent="." instance=ExtResource("3_lhld2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="Ghost" parent="." instance=ExtResource("4_hy80p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.854466, 1.97626, -4.46544)
+
+[node name="target" parent="." instance=ExtResource("5_vgcsq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 16, 0, 39)
+
+[node name="target2" parent="." instance=ExtResource("5_vgcsq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 12, 0, 39)
+
+[node name="target3" parent="." instance=ExtResource("5_vgcsq")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8, 0, 39)
+
+[editable path="map"]

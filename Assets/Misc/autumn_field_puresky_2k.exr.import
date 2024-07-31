@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6mk8mk1smqq3"
-path.s3tc="res://.godot/imported/texture_01.png-65741c2fc79bcb95a6eb31ebb3a7f43e.s3tc.ctex"
+uid="uid://y483d4txktjq"
+path.bptc="res://.godot/imported/autumn_field_puresky_2k.exr-cadf64b20425182e001e3e2ee19ad9a9.bptc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/prototypeTexture/PrototypePNG/Purple/texture_01.png"
-dest_files=["res://.godot/imported/texture_01.png-65741c2fc79bcb95a6eb31ebb3a7f43e.s3tc.ctex"]
+source_file="res://Assets/Misc/autumn_field_puresky_2k.exr"
+dest_files=["res://.godot/imported/autumn_field_puresky_2k.exr-cadf64b20425182e001e3e2ee19ad9a9.bptc.ctex"]
 
 [params]
 

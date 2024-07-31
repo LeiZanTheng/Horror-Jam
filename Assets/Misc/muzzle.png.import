@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://y483d4txktjq"
-path.bptc="res://.godot/imported/autumn_field_puresky_2k.exr-879a8eaff14bf7e01a41dc8b5873ce9a.bptc.ctex"
+uid="uid://b6j14odwmddi5"
+path.s3tc="res://.godot/imported/muzzle.png-0b283ad7f35422cd177476d06d40205f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Assets/autumn_field_puresky_2k.exr"
-dest_files=["res://.godot/imported/autumn_field_puresky_2k.exr-879a8eaff14bf7e01a41dc8b5873ce9a.bptc.ctex"]
+source_file="res://Assets/Misc/muzzle.png"
+dest_files=["res://.godot/imported/muzzle.png-0b283ad7f35422cd177476d06d40205f.s3tc.ctex"]
 
 [params]
 

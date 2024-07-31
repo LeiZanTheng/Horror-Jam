@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://g3s84mllab2v"]
+
+[ext_resource type="Texture2D" uid="uid://ca24m0jgqo50q" path="res://Assets/Misc/ghost.png" id="1_pr4fy"]
+
+[node name="Ghost" type="Sprite3D"]
+billboard = 1
+texture = ExtResource("1_pr4fy")

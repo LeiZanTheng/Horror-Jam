@@ -3,14 +3,15 @@
 Ý tưởng: 
 - Map thử nghiệm của 1 game bắn súng fps
 - Người chơi được 1 người lạ gửi chơi thử
-- Lore: Giải cứu oan hồn ? Chơi game bị oan hồn ám phải tìm cách tiêu diệt ? 
+- Lore: Giải cứu oan hồn ? Chơi game bị oan hồn ám phải tìm cách tiêu diệt ? ---> méo đủ tgian, làm game jumpscare gay lọ
 
 Thực hiện:
+- Map : map theo dạng prototype của các game
 - Kẻ địch thường : vài tấm bia bắn đạn ? 
 - Ghost : thứ gì đó kinh dị ? (hốc mắt đen, da trắng, miệng cười kinh dị :skull:)
 - Jumpscare when ? :
-+ Hoàn thành map 1? (đang chơi + kthuc)
-+ 
-+ 
++ Bắn vào mấy tấm bia xong ma xh ?
++ Có màn rượt đuổi
++ Chết
 
-
+*Còn thời gian thì sửa no-clip cho súng

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://so5m48j13sj8"]
+[gd_scene load_steps=28 format=3 uid="uid://so5m48j13sj8"]
 
 [ext_resource type="Texture2D" uid="uid://y483d4txktjq" path="res://Assets/Misc/autumn_field_puresky_2k.exr" id="1_y60k7"]
 [ext_resource type="Shader" path="res://Scripts/crt_effect.gdshader" id="3_1u12o"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://jkg2csoeweyf" path="res://Assets/Sounds/phasmophobia-ghost-attack-1_b6tVbw6.mp3" id="10_yxei8"]
 [ext_resource type="AudioStream" uid="uid://cv50gidmxn3qv" path="res://Assets/Sounds/hl2-stalker-scream.mp3" id="11_4cjdv"]
 [ext_resource type="Texture2D" uid="uid://dduwnad0j5x41" path="res://Assets/Screenshot 2024-07-31 235525.png" id="11_728f0"]
+[ext_resource type="PackedScene" uid="uid://dv1br4dhg7iem" path="res://Assets/Models/headshot_noti.blend" id="13_8sqdf"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_okudv"]
 panorama = ExtResource("1_y60k7")
@@ -359,6 +360,12 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("11_728f0")
 
+[node name="headshot_noti" parent="." instance=ExtResource("13_8sqdf")]
+transform = Transform3D(-1, -8.74228e-08, 3.82137e-15, 0, -4.37114e-08, -1, 8.74228e-08, -1, 4.37114e-08, 1, 6, 16)
+
+[node name="Text" parent="headshot_noti" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+
 [connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
 [connection signal="body_entered" from="banana/Cube/StaticBody3D" to="banana/Cube/StaticBody3D" method="_on_body_entered"]
@@ -366,3 +373,4 @@ texture = ExtResource("11_728f0")
 [editable path="CharacterBody3D"]
 [editable path="CharacterBody3D/Camera3D/gun"]
 [editable path="map"]
+[editable path="headshot_noti"]

@@ -15,7 +15,7 @@ var return_des : Vector3 = Vector3(17, 2, -3)
 
 func _process(delta: float) -> void:
 	if headshot_counter >= 3 and phase == 1:
-		_jumpscare_2()
+		_jumpscare_1()
 		
 # First jumpscare
 func _jumpscare_1() -> void:
